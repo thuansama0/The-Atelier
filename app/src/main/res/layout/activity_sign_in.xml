@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signInRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/atelier_bg"
+    tools:context=".SignInActivity">
+
+    <!-- Top header (brand anchor overlay) -->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingStart="24dp"
+        android:paddingTop="104dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="0dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="0dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:includeFontPadding="false"
+                android:text="Welcome Back."
+                android:textAlignment="center"
+                android:textColor="@color/atelier_heading"
+                android:textSize="48sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="448dp" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="serif"
+                android:lineSpacingExtra="6dp"
+                android:maxWidth="320dp"
+                android:text="Enter your workspace to continue curating your digital stories."
+                android:textAlignment="center"
+                android:textColor="@color/atelier_body"
+                android:textSize="18sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintWidth_max="448dp" />
+
+            <!-- Form -->
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.2"
+                android:text="EMAIL ADDRESS"
+                android:textAllCaps="true"
+                android:textColor="@color/atelier_primary"
+                android:textSize="12sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle"
+                app:layout_constraintWidth_max="448dp" />
+
+            <EditText
+                android:id="@+id/emailInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="serif"
+                android:hint="name@example.com"
+                android:inputType="textEmailAddress"
+                android:paddingTop="17dp"
+                android:paddingBottom="17dp"
+                android:textColor="@color/atelier_heading"
+                android:textColorHint="@color/atelier_muted_60"
+                android:textSize="18sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailLabel"
+                app:layout_constraintWidth_max="448dp" />
+
+            <View
+                android:id="@+id/emailDivider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_hairline"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailInput"
+                app:layout_constraintWidth_max="448dp" />
+
+            <TextView
+                android:id="@+id/passwordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.2"
+                android:text="PASSWORD"
+                android:textAllCaps="true"
+                android:textColor="@color/atelier_primary"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/emailDivider"
+                app:layout_constraintTop_toBottomOf="@id/emailDivider" />
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.1"
+                android:text="FORGOT PASSWORD?"
+                android:textAllCaps="true"
+                android:textColor="@color/atelier_body"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/emailDivider"
+                app:layout_constraintTop_toBottomOf="@id/emailDivider" />
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="serif"
+                android:hint="••••••••"
+                android:inputType="textPassword"
+                android:paddingTop="17dp"
+                android:paddingBottom="17dp"
+                android:textColor="@color/atelier_heading"
+                android:textColorHint="@color/atelier_muted_60"
+                android:textSize="18sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+                app:layout_constraintWidth_max="448dp" />
+
+            <View
+                android:id="@+id/passwordDivider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_hairline"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordInput"
+                app:layout_constraintWidth_max="448dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signInButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="sans-serif"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:letterSpacing="0.3"
+                android:minHeight="56dp"
+                android:text="SIGN IN"
+                android:textAllCaps="true"
+                android:textColor="@color/atelier_on_primary"
+                android:textSize="12sp"
+                app:backgroundTint="@color/atelier_primary"
+                app:cornerRadius="2dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordDivider"
+                app:layout_constraintWidth_max="448dp" />
+
+            <!-- Divider (always perfectly centered) -->
+            <LinearLayout
+                android:id="@+id/orDividerRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signInButton"
+                app:layout_constraintWidth_max="448dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_hairline" />
+
+                <TextView
+                    android:id="@+id/orText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.2"
+                    android:text="OR CONTINUE WITH"
+                    android:textAllCaps="true"
+                    android:textColor="@color/atelier_muted"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_hairline" />
+            </LinearLayout>
+
+            <!-- Social buttons -->
+            <LinearLayout
+                android:id="@+id/socialRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orDividerRow"
+                app:layout_constraintWidth_max="448dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/googleButton"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.1"
+                    android:text="GOOGLE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/atelier_body"
+                    android:textSize="10sp"
+                    app:backgroundTint="@color/atelier_surface"
+                    app:cornerRadius="2dp"
+                    app:strokeColor="@color/atelier_muted_20"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/appleButton"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.1"
+                    android:text="APPLE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/atelier_body"
+                    android:textSize="10sp"
+                    app:backgroundTint="@color/atelier_surface"
+                    app:cornerRadius="2dp"
+                    app:strokeColor="@color/atelier_muted_20"
+                    app:strokeWidth="1dp" />
+            </LinearLayout>
+
+            <!-- Footer link -->
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/socialRow"
+                app:layout_constraintWidth_max="448dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="New to the atelier? "
+                    android:textColor="@color/atelier_body"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/createAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_link_underline"
+                    android:fontFamily="serif"
+                    android:paddingBottom="3dp"
+                    android:text="Create an account"
+                    android:textColor="@color/atelier_primary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topHeader"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:alpha="0.8"
+        android:background="@drawable/bg_header_overlay"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/brandTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="The Atelier"
+            android:textColor="@color/atelier_primary"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Menu"
+            android:src="@drawable/ic_menu_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/atelier_body" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/headerDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:alpha="0.8"
+        android:background="@color/atelier_surface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

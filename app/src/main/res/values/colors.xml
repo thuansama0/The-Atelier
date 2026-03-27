@@ -2,4 +2,19 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- The Atelier (from Figma Sign In screen) -->
+    <color name="atelier_bg">#FFF8FAF8</color>
+    <color name="atelier_surface">#FFF0F5F2</color>
+
+    <color name="atelier_primary">#FF456556</color>
+    <color name="atelier_heading">#FF2A3432</color>
+    <color name="atelier_body">#FF57615F</color>
+
+    <color name="atelier_on_primary">#FFE0FFED</color>
+
+    <color name="atelier_muted">#FFA9B4B1</color>
+    <color name="atelier_muted_60">#99A9B4B1</color>
+    <color name="atelier_muted_20">#33A9B4B1</color>
+    <color name="atelier_primary_20">#33456556</color>
 </resources>
